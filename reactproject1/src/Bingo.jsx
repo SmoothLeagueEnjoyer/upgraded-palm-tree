@@ -7,7 +7,7 @@ export function GetBingo() {
     const size = Math.min(window.innerHeight, window.innerWidth);
 
     //const boards = ["Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Baka", "Elijah", "Woody", "Blink", "Tehp"];
-    const boards = ["Guild", "Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Tehp", "Elijah", "Turuu", "Lacuna", "Komodo", "Strk"];
+    const boards = ["Guild", "Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Tehp", "Elijah", "Turuu", "Lacuna", "Komodo", "Strk", "Blink"];
 
     const [boardName, setBoardName] = useState("");
     const [boardID, setBoardID] = useState(-1);
