@@ -9,7 +9,6 @@ export function GetBingo() {
     //const boards = ["Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Baka", "Elijah", "Woody", "Blink", "Tehp"];
     const boards = ["Guild", "Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Tehp", "Elijah", "Turuu", "Lacuna", "Komodo", "Strk", "Blink"];
 
-    const [boardName, setBoardName] = useState("");
     const [boardID, setBoardID] = useState(-1);
     const [squares, setSquares] = useState([]);
 
@@ -43,7 +42,6 @@ export function GetBingo() {
 
     function handleBoardName(e) {
         const boardname = e.target.value;
-        setBoardName(boardname);
         getTable(boardname);
     }
 
@@ -64,7 +62,7 @@ export function GetBingo() {
             }
             const cell = <td key="hello" style={{
                 wordBreak: 'break-word',
-                height: size * 5 / 40, width: size * 5 / 40,
+                height: size * 4 / 40, width: size * 4 / 40,
             }}
                 className="hoverCell">
                 <div className="square-container">
@@ -80,7 +78,21 @@ export function GetBingo() {
             const row = <tr>{r}</tr>
             return row
         });
-        return <>{rowmap}</>
+        return <>
+            <tr className="border-0">
+                <td style={{ height: size * 4 / 40, width: size * 4 / 40 }} className="sane border-0">S
+                </td>
+                <td style={{ height: size * 4 / 40, width: size * 4 / 40 }} className="sane border-0">A
+                </td>
+                <td style={{ height: size * 4 / 40, width: size * 4 / 40 }} className="sane border-0">N
+                </td>
+                <td style={{ height: size * 4 / 40, width: size * 4 / 40 }} className="sane border-0">E
+                </td>
+                <td style={{ height: size * 4 / 40, width: size * 4 / 40 }} className="sane border-0">?
+                </td>
+            </tr>
+                {rowmap}
+            </>
     }
        
 
@@ -102,7 +114,7 @@ export function GetBingo() {
                 <div className="container">
                     <table className="table table-responsive table-bordered"
                         style={size > 1000 ?
-                            { height: size, width: size } : { height: size, width: size }}                    >
+                            { height: size * 4 / 5, width: size * 4 / 5 } : { height: size * 4 / 5, width: size * 4 / 5 }}                    >
                         <tbody>
                             {bingoBody()}
                         </tbody>

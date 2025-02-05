@@ -29,13 +29,24 @@ td {
     font-size: 1rem;
 }
 
+th {
+
+}
+
+.sane {
+    text-align: center;
+    font-size: 3rem;
+    align-items: center; /*Aligns vertically center */
+    justify-content: center; /*Aligns horizontally center */
+}
+
 .square-container {
         position: relative;
         width: 100%;
         height: 0;
         padding-bottom: 100%; /* 1:1 aspect ratio */
         overflow: hidden;
-    }
+}
 
 .square-content {
     position: absolute;
