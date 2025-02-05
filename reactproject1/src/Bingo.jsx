@@ -15,9 +15,9 @@ export function GetBingo() {
 
     
 
-    function getTable(e) {
+    function getTable(b) {
         for (let i = 0; i < boards.length; i++) {
-            if (boardName === boards[i]) {
+            if (b === boards[i]) {
                 setBoardID(i);
                 printBoard(i);
                 return
@@ -44,17 +44,36 @@ export function GetBingo() {
     function handleBoardName(e) {
         const boardname = e.target.value;
         setBoardName(boardname);
-        handleSearch(boardName);
+        getTable(boardname);
     }
 
-    function handleSearch(e) {
-        getTable(e);
-    }
 
     function bingoBody() {
         var rows = [[], [], [], [], []];
         squares.map((item, index) => {
-            const cell = <td key="hello" style={{ height: size * 5 / 40, width: size * 5 / 40 }} className="hoverCell" onClick={(e) => handleCell(e)}>{item}</td>
+            let fontSize = '1rem';
+            const textLength = item.length;
+            if (textLength > 40) {
+                fontSize = '0.8rem';
+            } else if (textLength > 80) {
+                fontSize = '0.6rem';
+            } else if (textLength > 120) {
+                fontSize = '0.4rem';
+            } else if (textLength > 160) {
+                fontSize = '0.2rem';
+            }
+            const cell = <td key="hello" style={{
+                wordBreak: 'break-word',
+                height: size * 5 / 40, width: size * 5 / 40,
+            }}
+                className="hoverCell">
+                <div className="square-container">
+                    <div
+                        className={index == 12 ? "square-content middleCell" : "square-content"}
+                        title={item} style={{ fontSize: fontSize }} onClick={(e) => handleCell(e)}>
+                        {item}
+                    </div>
+                </div></td>
             rows[index % 5].push(cell);
         });
         const rowmap = rows.map((r) => {
@@ -71,17 +90,19 @@ export function GetBingo() {
                 <h1 className="display-6">Available Boards:</h1>
                 <p className="d-flex">
                     {/*{boards.map((b) => { return <div className="m-1">{b}</div> })}</p>*/}
-                    {boards.map((b) => { return <button className="btn btn-outline-success m-1" type="submit" key={b} value={b} onClick={(e) => handleBoardName(e)}>{b}</button> })}</p>
+                    {boards.map((b) => { return <button className="btn btn-danger m-1" type="submit" key={b} value={b} onClick={(e) => handleBoardName(e)}>{b}</button> })}</p>
             </div>
             {/*<div className="input-group m-4 w-25">
                 <input type="text" className="form-control" placeholder="Board Name" aria-label="Board Name" aria-describedby="basic-addon2" onChange={(e) => handleBoardName(e)}></input>
                     <div className="input-group-append">
-                    <button className="btn btn-success" type="submit" onClick={(e) => handleSearch(e)}>Get Board</button>
+                    <button className="btn btn-danger" type="submit" onClick={(e) => handleSearch(e)}>Get Board</button>
                     </div>
             </div>*/}
             {boardID >= 0 ? 
                 <div className="container">
-                    <table className="table table-responsive table-bordered" style={{ height: size, width: size}}>
+                    <table className="table table-responsive table-bordered"
+                        style={size > 1000 ?
+                            { height: size, width: size } : { height: size, width: size }}                    >
                         <tbody>
                             {bingoBody()}
                         </tbody>
