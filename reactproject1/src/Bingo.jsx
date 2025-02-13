@@ -17,6 +17,7 @@ export function GetBingo() {
     const [squares, setSquares] = useState([]);
 
     const [name, setName] = useState('');
+    const [account, setAccount] = useState('');
 
     
 
@@ -52,10 +53,12 @@ export function GetBingo() {
     }
 
     function example1(e) {
+        setAccount("Example 1");
         getTable("Example 1");
     }
 
     function example2(e) {
+        setAccount("Example 2");
         getTable("Example 2");
     }
 
@@ -66,7 +69,7 @@ export function GetBingo() {
             for (let i = 0; i < lines.length; i++) {
                 //console.log(lines[i]);
                 if (lines[i].startsWith(account)) {
-                    console.log("here");
+                    setAccount(lines[i]);
                     setBoardID(i);
                     printBoard(i);
                     break;
@@ -75,6 +78,7 @@ export function GetBingo() {
 
         }
         );
+        setAccount("\""+account+"\"" +" not found")
     }
 
     const handleSearch = (e) => {
@@ -152,6 +156,7 @@ export function GetBingo() {
                         <Button className="btn btn-danger" type="submit">Get board</Button>
                     </form>
                 </div>
+                <div><small>Search is case sensitive.</small></div>{account ? <div>Board: { account }</div> : <div>No account found or selected.</div>}
             </div>
             {boardID >= 0 ? 
                 <div className="container">
