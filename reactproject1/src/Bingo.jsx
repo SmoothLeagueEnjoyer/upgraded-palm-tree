@@ -2,15 +2,21 @@ import React, { useState} from "react";
 import { useDispatch } from "react-redux";
 //import exampleUrl from '/bingos.txt?url';
 import bingoFile from './assets/bingos.txt';
+import accountFile from './assets/members.txt';
+import Button from 'react-bootstrap/Button';
+
 export function GetBingo() {
     const dispatch = useDispatch();
     const size = Math.min(window.innerHeight, window.innerWidth);
 
     //const boards = ["Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Baka", "Elijah", "Woody", "Blink", "Tehp"];
-    const boards = ["Guild", "Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Tehp", "Elijah", "Turuu", "Lacuna", "Komodo", "Strk", "Blink"];
+    //const boards = ["Guild", "Smooth", "Monster", "Jetey", "Rifter", "Ardilla", "Strict", "Welt", "Tehp", "Elijah", "Turuu", "Lacuna", "Komodo", "Strk", "Blink"];
+    const boards = ["Example 1", "Example 2",];
 
     const [boardID, setBoardID] = useState(-1);
     const [squares, setSquares] = useState([]);
+
+    const [name, setName] = useState('');
 
     
 
@@ -45,22 +51,61 @@ export function GetBingo() {
         getTable(boardname);
     }
 
+    function example1(e) {
+        getTable("Example 1");
+    }
+
+    function example2(e) {
+        getTable("Example 2");
+    }
+
+    function accountSearch(account) {
+        //console.log(account);
+        fetch(accountFile).then(response => response.text()).then(text => {
+            const lines = text.split('\n');
+            for (let i = 0; i < lines.length; i++) {
+                //console.log(lines[i]);
+                if (lines[i].startsWith(account)) {
+                    console.log("here");
+                    setBoardID(i);
+                    printBoard(i);
+                    break;
+                }
+            }
+
+        }
+        );
+    }
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        accountSearch(name);
+    }
+
 
     function bingoBody() {
         var rows = [[], [], [], [], []];
         squares.map((item, index) => {
-            let fontSize = '1rem';
+            let fontSize = '16px';
             const textLength = item.length;
             if (textLength > 40) {
-                fontSize = '0.8rem';
+                fontSize = '12px';
+            } else if (textLength > 50) {
+                fontSize = '10px';
+            } else if (textLength > 60) {
+                fontSize = '8px';
+            } else if (textLength > 70) {
+                fontSize = '6px';
             } else if (textLength > 80) {
-                fontSize = '0.6rem';
+                fontSize = '5px';
+            } else if (textLength > 90) {
+                fontSize = '4px';
+            } else if (textLength > 100) {
+                fontSize = '3px';
             } else if (textLength > 120) {
-                fontSize = '0.4rem';
-            } else if (textLength > 160) {
-                fontSize = '0.2rem';
+                fontSize = '2px';
             }
-            const cell = <td key="hello" style={{
+            const cell = <td key={index} style={{
                 wordBreak: 'break-word',
                 height: size * 4 / 40, width: size * 4 / 40,
             }}
@@ -99,17 +144,15 @@ export function GetBingo() {
     return (
         <>
             <div>
-                <h1 className="display-6">Available Boards:</h1>
-                <p className="d-flex">
-                    {/*{boards.map((b) => { return <div className="m-1">{b}</div> })}</p>*/}
-                    {boards.map((b) => { return <button className="btn btn-danger m-1" type="submit" key={b} value={b} onClick={(e) => handleBoardName(e)}>{b}</button> })}</p>
+                <div className="btn-toolbar mb-3" role="toolbar" aria-label="Example buttons">
+                    <Button className="btn btn-danger m-1" onClick={(e) => example1(e)}>Example 1</Button>
+                    <Button className="btn btn-danger m-1" onClick={(e) => example2(e)}>Example 2</Button>
+                    <form className="input-group mx-2" onSubmit={handleSearch}>
+                        <input type="text" className="form-control" placeholder="Account name" aria-label="Account name" onChange={(e) => setName(e.target.value)} value={name} />
+                        <Button className="btn btn-danger" type="submit">Get board</Button>
+                    </form>
+                </div>
             </div>
-            {/*<div className="input-group m-4 w-25">
-                <input type="text" className="form-control" placeholder="Board Name" aria-label="Board Name" aria-describedby="basic-addon2" onChange={(e) => handleBoardName(e)}></input>
-                    <div className="input-group-append">
-                    <button className="btn btn-danger" type="submit" onClick={(e) => handleSearch(e)}>Get Board</button>
-                    </div>
-            </div>*/}
             {boardID >= 0 ? 
                 <div className="container">
                     <table className="table table-responsive table-bordered"

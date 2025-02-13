@@ -12,7 +12,7 @@ function App() {
         <>
             <Provider store={store}>
             <div className="everything">
-                    <h1 className="display-2">Exile Bingo</h1>
+                    <h1 className="display-2">SGF Bingo</h1>
                 <div className="bingo">
                     <GetBingo/>
                 </div>
