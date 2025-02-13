@@ -1,0 +1,55 @@
+<div class="itemPopupContainer newItemPopup rarePopup"><div class="itemBoxContent">
+    <div class="itemHeader doubleLine">
+        <span class="l "></span>
+        <div class="itemName">
+            <span class="lc">Hate Wind</span>
+        </div>
+        <div class="itemName typeLine">
+            <span class="lc">Grove Bow</span>
+        </div>
+        <span class="r "></span>
+    </div>
+    <div class="content">
+            <div class="property"><span class="lc"><span>Bow</span></span></div>
+            <div class="property"><span class="lc s" data-field="pdamage"><span>Physical Damage: </span><span class="colourDefault">20-61</span></span></div>
+            <div class="property"><span class="lc s" data-field="edamage"><span>Elemental Damage: </span><span class="colourColdDamage">38-58</span></span></div>
+            <div class="property"><span class="lc s" data-field="crit"><span>Critical Strike Chance: </span><span class="colourDefault">5.00%</span></span></div>
+            <div class="property"><span class="lc s" data-field="aps"><span>Attacks per Second: </span><span class="colourDefault">1.50</span></span></div>
+        <div class="separator"></div>
+            <div class="itemLevel"><span class="lc s" data-field="ilvl">Item Level: <span class="colourDefault">38</span></span></div>
+            <div class="requirements">
+                <span class="lc">
+                Requires <span class="s" data-field="lvl"><span>Level </span><span class="colourDefault">35</span></span>, <span class="s" data-field="dex"><span class="colourDefault">116</span> <span>Dex</span></span>
+                </span>
+            </div>
+        
+        
+        
+        
+        
+        
+        <div class="separator"></div>
+            <div class="explicitMod" data-mod="3"><span class="lc l pr">P7<span class="d">&nbsp;[29—40 to 58—68]</span></span><span class="lc s" data-field="stat.explicit.stat_1037193709">Adds 38 to 58 Cold Damage</span><span class="lc r pr"><span class="d">Frigid (≥27)</span></span></div><div class="explicitMod" data-mod="2"><span class="lc l su">S5<span class="d">&nbsp;[11—15]</span></span><span class="lc s" data-field="stat.explicit.stat_2923486259">+11% to Chaos Resistance</span><span class="lc r su"><span class="d">of Banishment (≥30)</span></span></div><div class="explicitMod" data-mod="0"><span class="lc l su">S2<span class="d">&nbsp;[4—4]</span></span><span class="lc s" data-field="stat.explicit.stat_821021828">Grants 4 Life per Enemy Hit</span><span class="lc r su"><span class="d">of Regrowth (≥30)</span></span></div><div class="explicitMod" data-mod="1"><span class="lc l su">S2<span class="d">&nbsp;[7—10]</span></span><span class="lc s" data-field="stat.explicit.stat_3695891184">Gain 7 Life per Enemy Killed</span><span class="lc r su"><span class="d">of Victory (≥23)</span></span></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="separator"></div>
+            <div class="textCurrency itemNote">~price 1 alch</div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+Item Class: Bows
+Rarity: Rare
+Damnation Strike
+Death Bow
+--------
+Bow
+Physical Damage: 28-73
+Elemental Damage: 39-68 (augmented)
+Critical Strike Chance: 6.65% (augmented)
+Attacks per Second: 1.20
+--------
+Requirements:
+Level: 32
+Dex: 87 (augmented)
+--------
+Sockets: G-G-G 
+--------
+Item Level: 36
+--------
+33% increased Critical Strike Chance (implicit)
+--------
+18% reduced Attribute Requirements
+Adds 39 to 68 Cold Damage
+9% increased Global Accuracy Rating
++12% to Lightning Resistance
+5% increased Light Radius
+--------
+Note: ~price 1 alch

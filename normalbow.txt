@@ -1,0 +1,49 @@
+<div class="itemPopupContainer newItemPopup normalPopup"><div class="itemBoxContent">
+    <div class="itemHeader">
+        <span class="l "></span>
+        <div class="itemName typeLine">
+            <span class="lc">Spine Bow</span>
+        </div>
+        <span class="r "></span>
+    </div>
+    <div class="content">
+            <div class="property"><span class="lc"><span>Bow</span></span></div>
+            <div class="property"><span class="lc s" data-field="pdamage"><span>Physical Damage: </span><span class="colourDefault">38-115</span></span></div>
+            <div class="property"><span class="lc s" data-field="crit"><span>Critical Strike Chance: </span><span class="colourDefault">6.50%</span></span></div>
+            <div class="property"><span class="lc s" data-field="aps"><span>Attacks per Second: </span><span class="colourDefault">1.40</span></span></div>
+        <div class="separator"></div>
+            <div class="itemLevel"><span class="lc s" data-field="ilvl">Item Level: <span class="colourDefault">77</span></span></div>
+            <div class="requirements">
+                <span class="lc">
+                Requires <span class="s" data-field="lvl"><span>Level </span><span class="colourDefault">64</span></span>, <span class="s" data-field="dex"><span class="colourDefault">212</span> <span>Dex</span></span>
+                </span>
+            </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+</div>

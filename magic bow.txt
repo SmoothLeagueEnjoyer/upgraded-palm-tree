@@ -1,0 +1,49 @@
+<div class="itemPopupContainer newItemPopup magicPopup"><div class="itemBoxContent">
+    <div class="itemHeader">
+        <span class="l "></span>
+        <div class="itemName typeLine">
+            <span class="lc">Ranger Bow</span>
+        </div>
+        <span class="r "></span>
+    </div>
+    <div class="content">
+            <div class="property"><span class="lc"><span>Bow</span></span></div>
+            <div class="property"><span class="lc s" data-field="pdamage"><span>Physical Damage: </span><span class="colourDefault">56-117</span></span></div>
+            <div class="property"><span class="lc s" data-field="crit"><span>Critical Strike Chance: </span><span class="colourDefault">6.00%</span></span></div>
+            <div class="property"><span class="lc s" data-field="aps"><span>Attacks per Second: </span><span class="colourDefault">1.30</span></span></div>
+        <div class="separator"></div>
+            <div class="itemLevel"><span class="lc s" data-field="ilvl">Item Level: <span class="colourDefault">63</span></span></div>
+            <div class="requirements">
+                <span class="lc">
+                Requires <span class="s" data-field="dex"><span class="colourDefault">212</span> <span>Dexterity</span></span>
+                </span>
+            </div>
+        
+        
+        
+        
+        
+        
+        <div class="separator"></div>
+        <div class="unmet"><span class="lc">Unidentified</span></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+</div>
